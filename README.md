@@ -8,6 +8,27 @@ This is a .NET 9 Minimal API project using Clean Architecture, CQRS with MediatR
 ```bash
 📦MinimalApiProject
 ├── 📂Application
+│   ├── 📂Abstractions
+│   │   └── 📄IPostRepository.cs
+│   │
+│   └── 📂Posts
+│       ├── 📂CommandHandler
+│       │   ├── 📄CreatePostHandler.cs
+│       │   ├── 📄DeletePostHandler.cs
+│       │   └── 📄UpdatePostHandler.cs
+│       │
+│       ├── 📂Commands
+│       │   ├── 📄CreatePost.cs
+│       │   ├── 📄DeletePost.cs
+│       │   └── 📄UpdatePost.cs
+│       │
+│       ├── 📂Queries
+│       │   ├── 📄GetAllPost.cs
+│       │   └── 📄GetPostById.cs
+│       │
+│       └── 📂QueryHandler
+│           ├── 📄GetAllPostHandler.cs
+│           └── 📄GetPostByIdHandler.cs
 │
 ├── 📂Domain
 │   └── 📂Models
@@ -34,6 +55,7 @@ This is a .NET 9 Minimal API project using Clean Architecture, CQRS with MediatR
 │   ├── 📄appsettings.json
 │   ├── 📄appsettings.Development.json
 │   └── 📄launchSettings.json
+
 
 ```
 
