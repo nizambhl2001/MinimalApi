@@ -84,4 +84,29 @@ This is a .NET 9 Minimal API project using Clean Architecture, CQRS with MediatR
 
     Microsoft SQL Server
 
+## ⚙️ Getting Started
+
+ # 1️⃣ Clone the Repository
+ 
+   git clone https://github.com/your-username/your-repo-name.git
+   cd your-repo-name
+
+ # 2️⃣ Setup Configuration
+
+   Update the appsettings.json:
+
+   "ConnectionStrings": {
+   "DefaultConnection": "Server=.;Database=YourDb;Trusted_Connection=True;"
+   }
+
+# 3️⃣ Run EF Migrations (Optional)
+
+  dotnet ef migrations add InitialCreate -p Infrastructure -s API
+  dotnet ef database update -p Infrastructure -s API
+
+# 4️⃣ Run the Application
+
+  dotnet run --project API
+
+
 
